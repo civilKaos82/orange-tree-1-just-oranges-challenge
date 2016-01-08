@@ -19,9 +19,3 @@ class OrangeTree
     # orange-picking logic goes here
   end
 end
-
-class Orange
-  # Initializes a new Orange with diameter +diameter+
-  def initialize(diameter)
-  end
-end

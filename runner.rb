@@ -1,3 +1,4 @@
+require_relative 'orange'
 require_relative 'orange_tree'
 
 #Only run this _after_ your implementation and tests are complete

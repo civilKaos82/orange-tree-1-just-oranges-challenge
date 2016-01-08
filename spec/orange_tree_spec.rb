@@ -1,4 +1,6 @@
+require_relative '../orange'
 require_relative '../orange_tree'
+
 
 describe OrangeTree do
   let(:tree) { OrangeTree.new }

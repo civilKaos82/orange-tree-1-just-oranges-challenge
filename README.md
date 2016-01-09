@@ -11,42 +11,25 @@ In this challenge we'll be designing a custom Ruby class:  `OrangeTree`.  We'll 
 As mentioned in the *Summary*, Fran has already started to develop this application.  She's created a complete and tested `Orange` class, which we'll make use of—our orange tree will grow oranges afterall.  Fran has only begun to dabble with creating the `OrangeTree` class.  She's laid out a few methods and written some comments on what they should do; she's also provided some skeleton code for testing the orange tree.  And, finally, she's written some of the script that will run (`runner.rb`) when we want to see a tree's production over its lifetime.  Review the code to get the gist of what Fran was planning on doing.  
 
 
-###Release 0 : Implement the OrangeTree and Orange classes
+### Release 0: Model an Orange Tree
+Here are some details Fran has provided for how she would like this early orange tree model to behave.  Remember, this is an early proof-of-concept application, so we won't worry about modeling things like how the temperature affects production.  We're just building a basic model.
 
-Use `attr_reader`, `attr_writer`, and/or `attr_accessor` so that we can call `tree.height` and `tree.age` to get a tree's height or age, respectively.  Which of the three `attr_` methods should you be using and why?
+Each of Fran's details should be translated into tests, so that we can verify our model conforms to them.  In parentheses, Fran has provided the method she intended to match these details.  Our class may very well include more methods than these, but these will form our class's public interface.
 
-Do the same with the `Orange` class so that we can call `orange.diameter` to get an orange's diameter.
+- A tree should have an age, which we should be able to check (`#age`).
+- A tree should have a height, which we should be able to check (`#height`).
+- Each growing season (`#pass_growing_season`) ...
+  - Any unharvested oranges from the previous season should drop.
+  - A tree should age one year.
+  - A tree should grow taller until it reaches its maximum height, say 25 feet.
+  - A tree should bear fruit if it is at least six years old.
+- A tree should die at age 100, and we should be able to check if it's dead (`#dead?`).
+- We should be able to check if a tree has any oranges (`#any_oranges?`).
+- We should be able to pick an orange off a tree (`#pick_an_orange`), or raise an error if we try to pick an orange when the tree has none.
 
-You should write tests for these methods.
 
-#### Implement Aging
+*Note:*  In the tests, don't use methods like `#instance_variable_get` to "peek inside the objects".  Write tests that assert correctness using only the object's public methods.  Ask for help, if stuck.
 
-As a tree ages, it grows taller.  Eventually it starts bearing fruit and stops growing &mdash; not necessarily at the same time.  Some years later, the tree dies and can bear fruit no more!
-
-Implement an `OrangeTree#age!` instance method that will age your tree one year.  Each year the tree should get some amount taller, and then eventually stop growing.  You can decide when the tree stops growing.
-
-Later, it should die.
-
-At this point your `OrangeTree` class should:
-
-1. Have an `OrangeTree#height` method which returns the tree's current height
-2. Have an `OrangeTree#age` method which returns the tree's current age
-3. Have an `OrangeTree#age!` method which ages the tree one year and grows the tree a little, if it's able to grow
-4. Have an `OrangeTree#dead?` method which returns `true` if the tree has died
-
-Update your tests to test these methods and their side-effects.
-
-> **Note: Don't use things like `instance_variable_get` in your tests to "peek inside" as you write your tests. Try to write tests that assert correctness using only the public methods you've exposed. If you get stuck on this, ask for help.
-
-#### Implement Orange-picking
-
-After some number of years &mdash; you decide &mdash; the orange tree starts to bear fruit.  Write a method `OrangeTree#has_oranges?` which returns `true` if there are any oranges on the tree and `false` otherwise.
-
-Also write a method `OrangeTree#pick_an_orange!` which will return one of the oranges on the tree (an instance of the `Orange` class).  If you try to pick an orange when there are no oranges left, your code should raise a `NoOrangesError` (defined in the source code).
-
-The `Orange` class needs to be implemented by this point, including `Orange.new` and `Orange#diameter`.
-
-Write tests for your methods. Make sure you assert their behavior and side-effects.
 
 #### Does the script run?
 

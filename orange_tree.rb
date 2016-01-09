@@ -3,9 +3,6 @@ class OrangeTree
   class NoOrangesError < StandardError
   end
 
-  # Ages the tree one year
-  # Grows the tree
-  # Produces oranges
   def pass_growing_season
   end
 

@@ -31,9 +31,6 @@ describe OrangeTree do
       expect {tree.pass_growing_season}.to change{tree.height}
     end
 
-    it "should cause the tree to eventually die" do
-    end
-
     context "the tree is old enough to bear fruit" do
       it "should cause the three to produce oranges" do
       end
@@ -61,6 +58,9 @@ describe OrangeTree do
     end
 
     it "the returned orange should no longer be on the tree" do
+    end
+
+    it "should raise an error if the tree has no oranges" do
     end
   end
 end

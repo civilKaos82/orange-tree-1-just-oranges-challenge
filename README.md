@@ -1,14 +1,12 @@
 # Model and Orange Tree
 
-##Summary
+## Summary
+Fran the Farmer is interested in building a model of her orange tree farm.  As a proof-of-concept, she's hoping to model one orange tree and its yearly production over its lifetime.  Fran began working on the program herself, but the success of her farm has left her little time for development.  We've been hired to complete the application for her.
 
-Sunny California grows oranges &mdash; mostly [Washington navel oranges](http://en.wikipedia.org/wiki/Orange_%28fruit%29#Navel_oranges) and [Valencia oranges](http://en.wikipedia.org/wiki/Valencia_orange), for the botanists among us.
+In this challenge we'll be designing a custom Ruby class:  `OrangeTree`.  We'll design its interface and all of its behaviors to specifications provided by Fran.  Once the model is complete, we'll create a script that will model a tree's production.
 
-Let's create a toy program to model an orange tree growing over the years.  We plant the orange tree, wait for it to bear some fruit, and then pick all the oranges as soon as it does.
 
-The tests in `orange_tree_spec.rb` show how all this might work together.
-
-##Releases
+## Releases
 
 ###Release 0 : Implement the OrangeTree and Orange classes
 

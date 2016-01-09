@@ -7,6 +7,9 @@ In this challenge we'll be designing a custom Ruby class:  `OrangeTree`.  We'll 
 
 
 ## Releases
+### Pre-release:  Review Provided Code
+As mentioned in the *Summary*, Fran has already started to develop this application.  She's created a complete and tested `Orange` class, which we'll make use of—our orange tree will grow oranges afterall.  Fran has only begun to dabble with creating the `OrangeTree` class.  She's laid out a few methods and written some comments on what they should do; she's also provided some skeleton code for testing the orange tree.  And, finally, she's written some of the script that will run (`runner.rb`) when we want to see a tree's production over its lifetime.  Review the code to get the gist of what Fran was planning on doing.  
+
 
 ###Release 0 : Implement the OrangeTree and Orange classes
 

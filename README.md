@@ -1,11 +1,5 @@
 # Model and Orange Tree
 
-##Learning Competencies
-
-* Modeling systems with objects.
-* Use instance variables and accessor methods effectively
-* Work with objects in Ruby
-
 ##Summary
 
 Sunny California grows oranges &mdash; mostly [Washington navel oranges](http://en.wikipedia.org/wiki/Orange_%28fruit%29#Navel_oranges) and [Valencia oranges](http://en.wikipedia.org/wiki/Valencia_orange), for the botanists among us.

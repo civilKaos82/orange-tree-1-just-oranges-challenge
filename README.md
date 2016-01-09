@@ -35,9 +35,7 @@ Each of Fran's details should be translated into tests, so that we can verify ou
 ### Release 1: Complete the Production Modeling Script
 We now have fully tested and functional `Orange` and `OrangeTree` classes.  Now it's time to use these models in an application.  Remember, Fran wants to see the yearly production of an orange tree over its lifetime.
 
-We need to complete the file `runner.rb`.  Specifically, we need to calculate the local variable `average_orange_diameter`, which tells us on average how large each of the harvested oranges were.
-
-Once that is done, establish an expectation for what the script will output.  Once we have our expectation, run the script to see our classes in action.
+We need to complete the file `runner.rb`.  Specifically, we need to calculate the local variable `average_orange_diameter`, which tells us on average how large each of the harvested oranges were.  Once that is done, establish an expectation for what the script will output.  Once we have our expectation, run the script to see our classes in action.
 
 Did the script meet our expectations?  If not, what are the errors or unexpected behaviors?  Do we understand them?  Write tests to catch any bugs in our `OrangeTree` class.  We might also need to update existing tests if we find we're asserting the wrong thing, or in the wrong way.  Continue until the script runs correctly.
 

@@ -42,3 +42,7 @@ Once that is done, establish an expectation for what the script will output.  On
 Did the script meet our expectations?  If not, what are the errors or unexpected behaviors?  Do we understand them?  Write tests to catch any bugs in our `OrangeTree` class.  We might also need to update existing tests if we find we're asserting the wrong thing, or in the wrong way.  Continue until the script runs correctly.
 
 
+## Conclusion
+We've modeled a real-world object to fit the needs of our application.  We'll be doing this a lot going forward.  We've had to make decisions regarding the internal state of our tree (i.e., which instance variables it needs).  Each tree needs to keep track of it's own age, height, and oranges.  And we're able to use that state to calculate more information about the tree:  is it old enough to bear fruit, is it dead, does it have any oranges?
+
+

@@ -1,30 +1,33 @@
 require_relative 'orange'
 require_relative 'orange_tree'
 
-#Only run this _after_ your implementation and tests are complete
 
 tree = OrangeTree.new
 
-tree.age! until tree.has_oranges?
+tree.pass_growing_season until tree.has_oranges?
 
-puts "Tree is #{tree.age} years old and #{tree.height} feet tall"
 
+# Report yearly harvest information for the lifetime of the tree.
 until tree.dead?
-  basket = []
+  harvested_oranges = []
 
   while tree.has_oranges?
     basket << tree.pick_an_orange!
   end
 
-  avg_diameter = # It's up to you to calculate the average diameter for this harvest.
+  avg_diameter = # Need to calculate the average diameter for this harvest.
 
-  puts "Year #{tree.age} Report"
-  puts "Tree height: #{tree.height} feet"
-  puts "Harvest:     #{basket.size} oranges with an average diameter of #{avg_diameter} inches"
-  puts ""
+  puts <<-HARVEST_REPORT.gsub(/^ {4}/, '')
+    YEAR #{tree.age} REPORT
+    -----------------------
+    Height: #{tree.height} feet.
+    Harvest: #{harvested_oranges.size} oranges with an average diameter of #{avg_diameter} inches.
 
-  # Age the tree another year
-  tree.age!
+
+  HARVEST_REPORT
+
+  # Pass another season
+  tree.pass_growing_season
 end
 
 puts "Alas, the tree, she is dead!"

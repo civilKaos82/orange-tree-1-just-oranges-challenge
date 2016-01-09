@@ -1,10 +1,12 @@
-# This is how you define your own custom exception classes
-class NoOrangesError < StandardError
-end
-
 class OrangeTree
+  # Define a custom exception class
+  class NoOrangesError < StandardError
+  end
+
   # Ages the tree one year
-  def age!
+  # Grows the tree
+  # Produces oranges
+  def pass_growing_season
   end
 
   # Returns +true+ if there are any oranges on the tree, +false+ otherwise
@@ -13,8 +15,8 @@ class OrangeTree
 
   # Returns an Orange if there are any
   # Raises a NoOrangesError otherwise
-  def pick_an_orange!
-    raise NoOrangesError, "This tree has no oranges" unless self.has_oranges?
+  def pick_an_orange
+    raise NoOrangesError, "This tree has no oranges" unless self.any_oranges?
 
     # orange-picking logic goes here
   end

@@ -32,13 +32,15 @@ Each of Fran's details should be translated into tests, so that we can verify ou
 *Note:*  In the tests, don't use methods like `#instance_variable_get` to "peek inside the objects".  Write tests that assert correctness using only the object's public methods.  Ask for help, if stuck.
 
 
-#### Does the script run?
+### Release 1: Complete the Production Modeling Script
+We now have fully tested and functional `Orange` and `OrangeTree` classes.  Now it's time to use these models in an application.  Remember, Fran wants to see the yearly production of an orange tree over its lifetime.
 
-Now that you've implemented your code and created tests for it, let's try and run it. Fill out `runner.rb` to calculate `avg_diameter`, then run the file to see your classes in action.
+We need to complete the file `runner.rb`.  Specifically, we need to calculate the local variable `average_orange_diameter`, which tells us on average how large each of the harvested oranges were.
 
-Does the script at the top of the challenge run and output what you'd expect?  (Hint: you have to be clear about your expectations before you answer that question.)
+Once that is done, establish an expectation for what the script will output.  Once we have our expectation, run the script to see our classes in action.
 
-If not, what are the errors or unexpected behaviors?  Do you understand them? Fix your code and write tests that would have caught your bug(s). You might need to update existing tests if you find you were asserting the wrong thing, or in the wrong way.
+Did the script meet our expectations?  If not, what are the errors or unexpected behaviors?  Do we understand them?  Write tests to catch any bugs in our `OrangeTree` class.  We might also need to update existing tests if we find we're asserting the wrong thing, or in the wrong way.  Continue until the script runs correctly.
+
 
 ##Resources
 

@@ -1,4 +1,4 @@
-# Model and Orange Tree
+# Model an Orange Tree
 
 ## Summary
 Fran the Farmer is interested in building a model of her orange tree farm.  As a proof-of-concept, she's hoping to model one orange tree and its yearly production over its lifetime.  Fran began working on the program herself, but the success of her farm has left her little time for development.  We've been hired to complete the application for her.

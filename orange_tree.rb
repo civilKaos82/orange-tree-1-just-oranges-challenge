@@ -6,6 +6,10 @@ class OrangeTree
   def pass_growing_season
   end
 
+  # Returns true if the tree is old enough to bear fruit (6), false otherwise
+  def fruit_bearing_age?
+  end
+
   # Returns +true+ if there are any oranges on the tree, +false+ otherwise
   def has_oranges?
   end

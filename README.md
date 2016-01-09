@@ -42,9 +42,3 @@ Once that is done, establish an expectation for what the script will output.  On
 Did the script meet our expectations?  If not, what are the errors or unexpected behaviors?  Do we understand them?  Write tests to catch any bugs in our `OrangeTree` class.  We might also need to update existing tests if we find we're asserting the wrong thing, or in the wrong way.  Continue until the script runs correctly.
 
 
-##Resources
-
-* Video: [Variable Scopes in Ruby](http://www.youtube.com/watch?v=iLxKNUFHAnY)
-* StackOverflow: [Why use Ruby's attr_accessor, attr_reader, and attr_writer?](http://stackoverflow.com/questions/5046831/why-use-rubys-attr-accessor-attr-reader-and-attr-writer)
-* StackOverflow: [What is attr_accessor in Ruby?](http://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
-* https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-change

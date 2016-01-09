@@ -45,7 +45,7 @@ Update your tests to test these methods and their side-effects.
 
 #### Implement Orange-picking
 
-After some number of years &mdash; you decide &mdash; the orange tree starts to bear fruit.  Write a method `OrangeTree#any_oranges?` which returns `true` if there are any oranges on the tree and `false` otherwise.
+After some number of years &mdash; you decide &mdash; the orange tree starts to bear fruit.  Write a method `OrangeTree#has_oranges?` which returns `true` if there are any oranges on the tree and `false` otherwise.
 
 Also write a method `OrangeTree#pick_an_orange!` which will return one of the oranges on the tree (an instance of the `Orange` class).  If you try to pick an orange when there are no oranges left, your code should raise a `NoOrangesError` (defined in the source code).
 

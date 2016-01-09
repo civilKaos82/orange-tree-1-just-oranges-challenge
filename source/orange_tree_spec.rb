@@ -37,7 +37,7 @@ describe OrangeTree do
     end
   end
 
-  pending '#any_oranges?' do
+  pending '#has_oranges?' do
     it 'should return true if oranges are on the tree' do
     end
 

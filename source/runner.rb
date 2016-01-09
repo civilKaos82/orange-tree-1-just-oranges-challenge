@@ -4,14 +4,14 @@ require_relative 'orange_tree'
 
 tree = OrangeTree.new
 
-tree.age! until tree.any_oranges?
+tree.age! until tree.has_oranges?
 
 puts "Tree is #{tree.age} years old and #{tree.height} feet tall"
 
 until tree.dead?
   basket = []
 
-  while tree.any_oranges?
+  while tree.has_oranges?
     basket << tree.pick_an_orange!
   end
 

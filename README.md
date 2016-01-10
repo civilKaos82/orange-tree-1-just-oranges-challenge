@@ -8,7 +8,7 @@ In this challenge we'll be designing a custom Ruby class:  `OrangeTree`.  We'll 
 
 ## Releases
 ### Pre-release:  Review Provided Code
-As mentioned in the *Summary*, Fran has already started to develop this application.  She's created a complete and tested `Orange` class, which we'll make use of—our orange tree will grow oranges afterall.  Fran has only begun to dabble with creating the `OrangeTree` class.  She's laid out a few methods and written some comments on what they should do; she's also provided some skeleton code for testing the orange tree.  And, finally, she's written some of the script that will run (`runner.rb`) when we want to see a tree's production over its lifetime.  Review the code to get the gist of what Fran was planning on doing.  
+As mentioned in the *Summary*, Fran has already started to develop this application.  She's created a complete and tested `Orange` class, which we'll make use of—our orange tree will grow oranges afterall.  Fran has only begun to dabble with creating the `OrangeTree` class.  She's laid out a few methods and written some comments on what they should do; she's also provided some skeleton code for testing the orange tree.  And, finally, she's written some of the script that will run (`runner.rb`) when we want to see a tree's production over its lifetime.  Review the code to get the gist of what Fran was planning on doing.
 
 
 ### Release 0: Model an Orange Tree
@@ -41,6 +41,6 @@ Did the script meet our expectations?  If not, what are the errors or unexpected
 
 
 ## Conclusion
-We've modeled a real-world object to fit the needs of our application.  We'll be doing this a lot going forward.  We've had to make decisions regarding the internal state of our tree (i.e., which instance variables it needs).  Each tree needs to keep track of it's own age, height, and oranges.  And we're able to use that state to calculate more information about the tree:  is it old enough to bear fruit, is it dead, does it have any oranges?
+We've modeled a real-world object to fit the needs of our application.  We'll be doing this a lot going forward.  We've had to make decisions regarding the internal state of our tree (i.e., which instance variables it needs).  Each tree needs to keep track of its own age, height, and oranges.  And we're able to use that state to calculate more information about the tree:  is it old enough to bear fruit, is it dead, does it have any oranges?
 
 

@@ -5,7 +5,7 @@ require_relative 'orange_tree'
 tree = OrangeTree.new
 
 # Let seasons pass until the tree is ready to bear fruit.
-tree.pass_growing_season until tree.fruit_bearing_age?
+tree.pass_growing_season until tree.mature?
 
 
 # Report yearly harvest information for the lifetime of the tree.

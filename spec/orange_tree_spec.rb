@@ -37,14 +37,11 @@ describe OrangeTree do
     end
   end
 
-  pending "#fruit_bearing_age?" do
+  pending "#mature?" do
     it "returns true if tree is old enough to bear fruit" do
     end
 
     it "returns false if tree is not old enough to bear fruit" do
-    end
-
-    it "returns false if tree is dead" do
     end
   end
 

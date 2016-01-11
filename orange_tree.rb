@@ -7,7 +7,7 @@ class OrangeTree
   end
 
   # Returns true if the tree is old enough to bear fruit (6), false otherwise
-  def fruit_bearing_age?
+  def mature?
   end
 
   # Returns +true+ if there are any oranges on the tree, +false+ otherwise

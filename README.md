@@ -14,7 +14,7 @@ As mentioned in the *Summary*, Fran has already started to develop this applicat
 ### Release 0: Model an Orange Tree
 Here are some details Fran has provided for how she would like this early orange tree model to behave.  Remember, this is an early proof-of-concept application, so we won't worry about modeling things like how the temperature affects production.  We're just building a basic model.
 
-Each of Fran's details should be translated into tests, so that we can verify our model conforms to them.  In parentheses, Fran has provided the method she intended to match these details.  Our class may very well include more methods than these, but these will form our class's public interface.
+Each of Fran's details should be translated into tests, so that we can verify that our model conforms to each expectation.  In parentheses, Fran has provided the method she intended to match these details.  Our class may very well include more methods than these, but these will form our class's public interface.
 
 - A tree should have an age, which we should be able to check (`#age`).
 - A tree should have a height, which we should be able to check (`#height`).

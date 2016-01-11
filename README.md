@@ -22,7 +22,7 @@ Each of Fran's details should be translated into tests, so that we can verify th
   - Any unharvested oranges from the previous season should drop.
   - A tree should age one year.
   - A tree should grow taller until it reaches its maximum height, say 25 feet.
-  - A tree should bear fruit if it is at least six years old.
+  - A tree should bear fruit if it is at least six years old, say 100 to 300 oranges.
 - We should be able to check if a tree is old enough to produce fruit (`#fruit_bearing_age?`).
 - A tree should die at age 100, and we should be able to check if it's dead (`#dead?`).
 - We should be able to check if a tree has any oranges (`#any_oranges?`).

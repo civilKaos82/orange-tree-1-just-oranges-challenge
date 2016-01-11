@@ -32,7 +32,7 @@ describe OrangeTree do
     end
 
     context "the tree is old enough to bear fruit" do
-      it "should cause the three to produce oranges" do
+      it "should cause the tree to produce oranges" do
       end
     end
   end

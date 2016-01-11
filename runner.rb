@@ -20,7 +20,7 @@ until tree.dead?
 
   average_orange_diameter = # Need to calculate the average diameter for this harvest.
 
-  # This is a heredoc, a way to format multiline string.
+  # This is a heredoc, a way to create a formatted multiline string.
   # http://makandracards.com/makandra/1675-using-heredoc-for-prettier-ruby-code
   puts <<-HARVEST_REPORT.gsub(/^ {4}/, '')
     YEAR #{tree.age} REPORT

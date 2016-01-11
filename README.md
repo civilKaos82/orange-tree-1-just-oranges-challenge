@@ -1,69 +1,46 @@
-# Orange Tree 1 Just Oranges
+# Model an Orange Tree
 
-##Learning Competencies
+## Summary
+Fran the Farmer is interested in building a model of her orange tree farm.  As a proof-of-concept, she's hoping to model one orange tree and its yearly production over its lifetime.  Fran began working on the program herself, but the success of her farm has left her little time for development.  We've been hired to complete the application for her.
 
-* Modeling systems with objects.
-* Use instance variables and accessor methods effectively
-* Work with objects in Ruby
+In this challenge we'll be designing a custom Ruby class:  `OrangeTree`.  We'll design its interface and all of its behaviors to specifications provided by Fran.  Once the model is complete, we'll create a script that will model a tree's production.
 
-##Summary
 
-Sunny California grows oranges &mdash; mostly [Washington navel oranges](http://en.wikipedia.org/wiki/Orange_%28fruit%29#Navel_oranges) and [Valencia oranges](http://en.wikipedia.org/wiki/Valencia_orange), for the botanists among us.
+## Releases
+### Pre-release:  Review Provided Code
+As mentioned in the *Summary*, Fran has already started to develop this application.  She's created a complete and tested `Orange` class, which we'll make use of—our orange tree will grow oranges afterall.  Fran has only begun to dabble with creating the `OrangeTree` class.  She's laid out a few methods and written some comments on what they should do; she's also provided some skeleton code for testing the orange tree.  And, finally, she's written some of the script that will run (`runner.rb`) when we want to see a tree's production over its lifetime.  Review the code to get the gist of what Fran was planning on doing.
 
-Let's create a toy program to model an orange tree growing over the years.  We plant the orange tree, wait for it to bear some fruit, and then pick all the oranges as soon as it does.
 
-The tests in `orange_tree_spec.rb` show how all this might work together.
+### Release 0: Model an Orange Tree
+Here are some details Fran has provided for how she would like this early orange tree model to behave.  Remember, this is an early proof-of-concept application, so we won't worry about modeling things like how the temperature affects production.  We're just building a basic model.
 
-##Releases
+Each of Fran's details should be translated into tests, so that we can verify that our model conforms to each expectation.  In parentheses, Fran has provided the method she intended to match these details.  Our class may very well include more methods than these, but these will form our class's public interface.
 
-###Release 0 : Implement the OrangeTree and Orange classes
+- A tree should have an age, which we should be able to check (`#age`).
+- A tree should have a height, which we should be able to check (`#height`).
+- Each growing season (`#pass_growing_season`) ...
+  - Any unharvested oranges from the previous season should drop.
+  - A tree should age one year.
+  - A tree should grow 2.5 feet taller until it reaches its maximum height, say 25 feet.
+  - A tree should bear fruit if it is at least six years old, say 100 to 300 oranges.
+- We should be able to check if a tree is old enough to produce fruit (`#fruit_bearing_age?`).
+- A tree should die at age 100, and we should be able to check if it's dead (`#dead?`).
+- We should be able to check if a tree has any oranges (`#any_oranges?`).
+- We should be able to pick an orange off a tree (`#pick_an_orange`), or raise an error if we try to pick an orange when the tree has none.
 
-Use `attr_reader`, `attr_writer`, and/or `attr_accessor` so that we can call `tree.height` and `tree.age` to get a tree's height or age, respectively.  Which of the three `attr_` methods should you be using and why?
 
-Do the same with the `Orange` class so that we can call `orange.diameter` to get an orange's diameter.
+*Note:*  In the tests, don't use methods like `#instance_variable_get` to "peek inside the objects".  Write tests that assert correctness using only the object's public methods.  Ask for help, if stuck.
 
-You should write tests for these methods.
 
-#### Implement Aging
+### Release 1: Complete the Production Modeling Script
+We now have fully tested and functional `Orange` and `OrangeTree` classes.  Now it's time to use these models in an application.  Remember, Fran wants to see the yearly production of an orange tree over its lifetime.
 
-As a tree ages, it grows taller.  Eventually it starts bearing fruit and stops growing &mdash; not necessarily at the same time.  Some years later, the tree dies and can bear fruit no more!
+We need to complete the file `runner.rb`.  Specifically, we need to calculate the local variable `average_orange_diameter`, which tells us on average how large each of the harvested oranges were.  Once that is done, establish an expectation for what the script will output.  Once we have our expectation, run the script to see our classes in action.
 
-Implement an `OrangeTree#age!` instance method that will age your tree one year.  Each year the tree should get some amount taller, and then eventually stop growing.  You can decide when the tree stops growing.
+Did the script meet our expectations?  If not, what are the errors or unexpected behaviors?  Do we understand them?  Write tests to catch any bugs in our `OrangeTree` class.  We might also need to update existing tests if we find we're asserting the wrong thing, or in the wrong way.  Continue until the script runs correctly.
 
-Later, it should die.
 
-At this point your `OrangeTree` class should:
+## Conclusion
+We've modeled a real-world object to fit the needs of our application.  We'll be doing this a lot going forward.  We've had to make decisions regarding the internal state of our tree (i.e., which instance variables it needs).  Each tree needs to keep track of its own age, height, and oranges.  And we're able to use that state to calculate more information about the tree:  is it old enough to bear fruit, is it dead, does it have any oranges?
 
-1. Have an `OrangeTree#height` method which returns the tree's current height
-2. Have an `OrangeTree#age` method which returns the tree's current age
-3. Have an `OrangeTree#age!` method which ages the tree one year and grows the tree a little, if it's able to grow
-4. Have an `OrangeTree#dead?` method which returns `true` if the tree has died
 
-Update your tests to test these methods and their side-effects.
-
-> **Note: Don't use things like `instance_variable_get` in your tests to "peek inside" as you write your tests. Try to write tests that assert correctness using only the public methods you've exposed. If you get stuck on this, ask for help.
-
-#### Implement Orange-picking
-
-After some number of years &mdash; you decide &mdash; the orange tree starts to bear fruit.  Write a method `OrangeTree#has_oranges?` which returns `true` if there are any oranges on the tree and `false` otherwise.
-
-Also write a method `OrangeTree#pick_an_orange!` which will return one of the oranges on the tree (an instance of the `Orange` class).  If you try to pick an orange when there are no oranges left, your code should raise a `NoOrangesError` (defined in the source code).
-
-The `Orange` class needs to be implemented by this point, including `Orange.new` and `Orange#diameter`.
-
-Write tests for your methods. Make sure you assert their behavior and side-effects.
-
-#### Does the script run?
-
-Now that you've implemented your code and created tests for it, let's try and run it. Fill out `runner.rb` to calculate `avg_diameter`, then run the file to see your classes in action.
-
-Does the script at the top of the challenge run and output what you'd expect?  (Hint: you have to be clear about your expectations before you answer that question.)
-
-If not, what are the errors or unexpected behaviors?  Do you understand them? Fix your code and write tests that would have caught your bug(s). You might need to update existing tests if you find you were asserting the wrong thing, or in the wrong way.
-
-##Resources
-
-* Video: [Variable Scopes in Ruby](http://www.youtube.com/watch?v=iLxKNUFHAnY)
-* StackOverflow: [Why use Ruby's attr_accessor, attr_reader, and attr_writer?](http://stackoverflow.com/questions/5046831/why-use-rubys-attr-accessor-attr-reader-and-attr-writer)
-* StackOverflow: [What is attr_accessor in Ruby?](http://stackoverflow.com/questions/4370960/what-is-attr-accessor-in-ruby)
-* https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-change

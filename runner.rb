@@ -15,7 +15,7 @@ until tree.dead?
   harvested_oranges = []
 
   while tree.has_oranges?
-    basket << tree.pick_an_orange!
+    harvested_oranges << tree.pick_an_orange!
   end
 
   average_orange_diameter = # Need to calculate the average diameter for this harvest.

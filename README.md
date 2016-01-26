@@ -25,7 +25,7 @@ Each of Fran's details should be translated into tests, so that we can verify th
   - A tree should bear fruit if it is mature (i.e. at least six years old), say 100 to 300 oranges.
 - We should be able to check if a tree is old enough to produce fruit (`#mature?`).
 - A tree should die at age 100, and we should be able to check if it's dead (`#dead?`).
-- We should be able to check if a tree has any oranges (`#any_oranges?`).
+- We should be able to check if a tree has any oranges (`#has_oranges?`).
 - We should be able to pick an orange off a tree (`#pick_an_orange`), or raise an error if we try to pick an orange when the tree has none.
 
 

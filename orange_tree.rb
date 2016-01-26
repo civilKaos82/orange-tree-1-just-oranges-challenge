@@ -17,7 +17,7 @@ class OrangeTree
   # Returns an Orange if there are any
   # Raises a NoOrangesError otherwise
   def pick_an_orange
-    raise NoOrangesError, "This tree has no oranges" unless self.any_oranges?
+    raise NoOrangesError, "This tree has no oranges" unless self.has_oranges?
 
     # orange-picking logic goes here
   end
